@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <option name="USE_RELEASE_OPTION" value="false" />
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="timber_spring_ioc" />
+        <module name="timber_spring_ioc_anno" />
+        <module name="timber_spring_aop" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel target="8">
+      <module name="timber_spring_aop" target="1.5" />
+      <module name="timber_spring_ioc" target="16" />
+      <module name="timber_spring_ioc_anno" target="8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

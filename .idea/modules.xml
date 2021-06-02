@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/My_Spring.iml" filepath="$PROJECT_DIR$/.idea/My_Spring.iml" />
+      <module fileurl="file://$PROJECT_DIR$/timber_spring_aop/timber_spring_aop.iml" filepath="$PROJECT_DIR$/timber_spring_aop/timber_spring_aop.iml" />
+      <module fileurl="file://$PROJECT_DIR$/timber_spring_ioc/timber_spring_ioc.iml" filepath="$PROJECT_DIR$/timber_spring_ioc/timber_spring_ioc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/timber_spring_ioc_anno/timber_spring_ioc_anno.iml" filepath="$PROJECT_DIR$/timber_spring_ioc_anno/timber_spring_ioc_anno.iml" />
+    </modules>
+  </component>
+</project>

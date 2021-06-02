@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--
+      init-method="init" 指定初始化方法
+      destroy-method="destory" 指定销毁方法
+      -->
+    <!--    <bean id="userDao" class="com.timber.dao.impl.UserDaoImpl" scope="singleton" init-method="init" destroy-method="destory"></bean>-->
+
+    <!-- 工厂的静态方法实例化对象 -->
+    <!--    <bean id="userDao" class="com.timber.factory.StaticFactory" factory-method="getUserDao"></bean>-->
+
+    <!-- 工厂的实例方法实例化对象 -->
+    <!--    <bean id="factory" class="com.timber.factory.DynamicFactory"></bean>-->
+    <!--    <bean id="userDao" factory-bean="factory" factory-method="getUserDao"></bean>-->
+
+    <!--    <bean id="userDao" class="com.timber.dao.impl.UserDaoImpl">-->
+    <!--        &lt;!&ndash;        普通数据类型注入&ndash;&gt;-->
+    <!--        <property name="username" value="timber"/>-->
+    <!--        <property name="age" value="21"/>-->
+    <!--    </bean>-->
+
+
+    <bean id="userDao" class="com.timber.dao.impl.UserDaoImpl">
+        <!--        普通数据或引用数据类型注入-->
+        <property name="strList">
+            <list>
+                <value>aaa</value>
+                <value>bbb</value>
+                <value>ccc</value>
+            </list>
+        </property>
+        <property name="userMap">
+            <map>
+                <entry key="u1" value-ref="user1"></entry>
+                <entry key="u2" value-ref="user2"></entry>
+            </map>
+        </property>
+        <property name="properties">
+            <props>
+                <prop key="p1">ppp1</prop>
+                <prop key="p2">ppp2</prop>
+                <prop key="p3">ppp3</prop>
+            </props>
+        </property>
+    </bean>
+
+    <bean id="user1" class="com.timber.domain.User">
+        <property name="name" value="timber"/>
+        <property name="addr" value="cn"/>
+    </bean>
+
+    <bean id="user2" class="com.timber.domain.User">
+        <property name="name" value="nobilow"/>
+        <property name="addr" value="usa"/>
+    </bean>
+
+
+    <!--    <bean id="userService" class="com.timber.service.impl.UserServiceImpl">-->
+    <!--        &lt;!&ndash; set方法依赖注入 &ndash;&gt;-->
+    <!--        <property name="userDao" ref="userDao"></property>-->
+    <!--    </bean>-->
+
+    <!--    p命名空间注入 -->
+    <!--    <bean id="userService" class="com.timber.service.impl.UserServiceImpl" p:userDao-ref="userDao" />-->
+    <bean id="userService" class="com.timber.service.impl.UserServiceImpl">
+        <!--        构造方法的注入-->
+        <constructor-arg name="userDao" ref="userDao"></constructor-arg>
+    </bean>
+
+    <!--    导入其他xml配置文件-->
+    <import resource="applicationContext-user.xml"/>
+    <import resource="applicationContext-product.xml"/>
+</beans>
