@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+                http://www.springframework.org/schema/context
+                http://www.springframework.org/schema/context/spring-context.xsd
+                http://www.springframework.org/schema/aop
+                http://www.springframework.org/schema/aop/spring-aop.xsd
+                ">
+    <!-- 3.开启AOP命名空间 -->
+    <bean id="userService" class="com.timber.service.impl.UserServiceImpl"/>
+    <!-- 2.配置共性功能为Spring控制的资源 -->
+    <bean id="myAdvice" class="com.timber.aop.AOPAdvice"/>
+    <!-- 4.配置AOP -->
+    <aop:config>
+        <!-- 5.配置切入点 -->
+        <aop:pointcut id="pt" expression="execution(* *..*(..))"/>
+        <!-- 6.配置切面（切入点与通知的关系） -->
+        <aop:aspect ref="myAdvice">
+            <!-- 7.配置具体的切入点对应通知中那个操作方法 -->
+            <aop:before method="function" pointcut-ref="pt"/>
+        </aop:aspect>
+    </aop:config>
+
+</beans>
