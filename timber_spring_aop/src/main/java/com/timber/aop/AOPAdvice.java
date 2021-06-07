@@ -5,4 +5,8 @@ public class AOPAdvice{
     public void function(){
         System.out.println("共性功能...");
     }
+
+    public void before(){
+        System.out.println("before ...");
+    }
 }

@@ -29,25 +29,17 @@
     <!--    </aop:config>-->
 
 
-    <!--    <aop:config>-->
-    <!--        &lt;!&ndash; 公共切入点 &ndash;&gt;-->
-    <!--        <aop:pointcut id="pt" expression="execution(* *(..))"/>-->
-    <!--        <aop:aspect ref="myAdvice">-->
-    <!--            &lt;!&ndash; 局部切入点 &ndash;&gt;-->
-    <!--            <aop:pointcut id="pt2" expression="execution(* *(..))"/>-->
-    <!--            &lt;!&ndash;<aop:before method="before" pointcut-ref="pt2"/>&ndash;&gt;-->
-    <!--            &lt;!&ndash; 私有切入点 &ndash;&gt;-->
-    <!--            <aop:before method="before" pointcut="execution(* *(..))"/>-->
-    <!--        </aop:aspect>-->
-    <!--    </aop:config>-->
-
-
     <aop:config>
+        <!-- 公共切入点 -->
         <aop:pointcut id="pt" expression="execution(* *(..))"/>
         <aop:aspect ref="myAdvice">
-            <aop:before method="before" pointcut-ref="pt"/>
+            <!-- 局部切入点 -->
+            <aop:pointcut id="pt2" expression="execution(* *(..))"/>
+            <!--<aop:before method="before" pointcut-ref="pt2"/>-->
+            <aop:before method="before" pointcut="execution(* *(..))"/>
         </aop:aspect>
     </aop:config>
+
 
     <!--    <aop:config>-->
     <!--        <aop:pointcut id="pt" expression="execution(* *..*(..))"/>-->
