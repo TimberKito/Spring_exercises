@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/My_Spring.iml" filepath="$PROJECT_DIR$/.idea/My_Spring.iml" />
       <module fileurl="file://$PROJECT_DIR$/timber_spring_aop/timber_spring_aop.iml" filepath="$PROJECT_DIR$/timber_spring_aop/timber_spring_aop.iml" />
+      <module fileurl="file://$PROJECT_DIR$/timber_spring_aop_anno/timber_spring_aop_anno.iml" filepath="$PROJECT_DIR$/timber_spring_aop_anno/timber_spring_aop_anno.iml" />
       <module fileurl="file://$PROJECT_DIR$/timber_spring_ioc/timber_spring_ioc.iml" filepath="$PROJECT_DIR$/timber_spring_ioc/timber_spring_ioc.iml" />
       <module fileurl="file://$PROJECT_DIR$/timber_spring_ioc_anno/timber_spring_ioc_anno.iml" filepath="$PROJECT_DIR$/timber_spring_ioc_anno/timber_spring_ioc_anno.iml" />
     </modules>

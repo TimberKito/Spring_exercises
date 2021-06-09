@@ -47,9 +47,9 @@ public class AOPAdvice{
 
 ```xml
 <!-- 3.开启AOP命名空间 -->
-<bean id="userService" class="com.timber.service.impl.UserServiceImpl"/>
+<bean id="userService" class="com.UserServiceImpl"/>
 <!-- 2.配置共性功能为Spring控制的资源 -->
-<bean id="myAdvice" class="com.timber.aop.AOPAdvice"/>
+<bean id="myAdvice" class="com.AOPAdvice"/>
 <!-- 4.配置AOP -->
 <aop:config>
     <!-- 5.配置切入点 -->

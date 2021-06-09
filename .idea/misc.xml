@@ -6,6 +6,7 @@
         <option value="$PROJECT_DIR$/timber_spring_aop/pom.xml" />
         <option value="$PROJECT_DIR$/timber_spring_ioc/pom.xml" />
         <option value="$PROJECT_DIR$/timber_spring_ioc_anno/pom.xml" />
+        <option value="$PROJECT_DIR$/timber_spring_aop_anno/pom.xml" />
       </list>
     </option>
   </component>

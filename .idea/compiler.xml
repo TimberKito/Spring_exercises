@@ -8,12 +8,14 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="timber_spring_ioc" />
-        <module name="timber_spring_ioc_anno" />
+        <module name="timber_spring_aop_anno" />
         <module name="timber_spring_aop" />
+        <module name="timber_spring_ioc_anno" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="8">
       <module name="timber_spring_aop" target="1.5" />
+      <module name="timber_spring_aop_anno" target="8" />
       <module name="timber_spring_ioc" target="16" />
       <module name="timber_spring_ioc_anno" target="8" />
     </bytecodeTargetLevel>

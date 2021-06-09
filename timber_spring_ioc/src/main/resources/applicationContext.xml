@@ -59,14 +59,14 @@
     </bean>
 
 
-    <!--    <bean id="userService" class="com.timber.service.impl.UserServiceImpl">-->
+    <!--    <bean id="userService" class="com.UserServiceImpl">-->
     <!--        &lt;!&ndash; set方法依赖注入 &ndash;&gt;-->
     <!--        <property name="userDao" ref="userDao"></property>-->
     <!--    </bean>-->
 
     <!--    p命名空间注入 -->
-    <!--    <bean id="userService" class="com.timber.service.impl.UserServiceImpl" p:userDao-ref="userDao" />-->
-    <bean id="userService" class="com.timber.service.impl.UserServiceImpl">
+    <!--    <bean id="userService" class="com.UserServiceImpl" p:userDao-ref="userDao" />-->
+    <bean id="userService" class="com.UserServiceImpl">
         <!--        构造方法的注入-->
         <constructor-arg name="userDao" ref="userDao"></constructor-arg>
     </bean>
